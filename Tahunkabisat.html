@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for tahun kabisat
+        for (let tahun = 1600 ; tahun <= 2024; tahun++ ) {
+        if(tahun % 4 == 0 && tahun % 100 != 0) {
+            console.log(tahun + 'Adalah Tahun Kabisat')
+        }else if(tahun % 400 ==0 ) {
+            console.log(tahun + 'adalah Tahun Kabisat')
+        }else if(tahun % 100 ==0) {
+            console.log(tahun + 'Bukan Tahun Kabisat ')
+        }else 
+            console.log(tahun + 'Bukan Tahun kabisat')
+        }
+
+        // while tahun kabisat
+        var tahun = 1600;
+
+        while(tahun <= 2024) {
+        if(tahun % 4 == 0 && tahun % 100 != 0) {
+            console.log(tahun + 'Adalah Tahun Kabisat')
+        }else if(tahun % 400 ==0 ) {
+            console.log(tahun + 'adalah Tahun Kabisat')
+        }else if(tahun % 100 ==0) {
+            console.log(tahun + 'Bukan Tahun Kabisat ')
+        }else{
+            console.log(tahun + 'Bukan Tahun kabisat')
+        }
+            tahun++
+        }
+
+        //do while kabisat
+        var tahun = 1600;
+        do{
+        if(tahun % 4 == 0 && tahun % 100 != 0) {
+            console.log(tahun + 'Adalah Tahun Kabisat')
+        }else if(tahun % 400 ==0 ) {
+            console.log(tahun + 'adalah Tahun Kabisat')
+        }else if(tahun % 100 ==0) {
+            console.log(tahun + 'Bukan Tahun Kabisat ')
+        }else{
+            console.log(tahun + 'Bukan Tahun kabisat')
+        }
+            tahun++
+        }while(tahun <= 2024)
+        
+    </script>
+</body>
+</html>

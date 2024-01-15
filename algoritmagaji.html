@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //gaji
+        //input 
+        let nama = prompt('Masukan Nama Karyawan')
+        let gajipokok = parseFloat(prompt("Masukan Gaji Pokok"))
+
+        //hitung tunjangan (20% gaji pokok)
+        let tunjangan = 0.2 * gajipokok ;
+
+        //hitung pajak (15% dari gaji pokok di tambah tunjangan
+        let pajak = 0.15 * (gajipokok + tunjangan);
+
+        //hitung gaji bersih (gaji pokok + tunjangan - pajak)
+        let gajibersih = gajipokok + tunjangan  - pajak;
+
+        //hasil
+        console.log('Nama karyawan:', nama)
+        console.log('Tunjangan:', tunjangan)
+        console.log('Pajak:', pajak)
+        console.log('Gaji Bersih:', gajibersih)
+
+    </script>
+</body>
+</html>
