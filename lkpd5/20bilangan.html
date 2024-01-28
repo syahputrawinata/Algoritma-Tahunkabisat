@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Inisialisasi variabel untuk bilangan terbesar, terkecil, dan jumlah total
+    let bilanganTerbesar = Number.MIN_SAFE_INTEGER;
+    let bilanganTerkecil = Number.MAX_SAFE_INTEGER;
+    let total = 0;
+
+    // Loop untuk menginput dan menghitung bilangan terbesar, terkecil, dan total
+    for (let i = 1; i <= 20; i++) {
+    // Menggunakan prompt untuk mendapatkan input dari pengguna
+    let input = parseFloat(prompt(`Masukkan bilangan ke-${i}:`));
+
+    // Memeriksa apakah input valid (berupa angka)
+    if (!isNaN(input)) {
+        // Mengupdate bilangan terbesar dan terkecil
+        bilanganTerbesar = Math.max(bilanganTerbesar, input);
+        bilanganTerkecil = Math.min(bilanganTerkecil, input);
+
+        // Menambahkan input ke total
+        total += input;
+    } else {
+        // Menampilkan pesan kesalahan jika input tidak valid
+        console.log(`Input tidak valid. Masukkan angka.`);
+        // Mengurangkan nilai i agar pengulangan tetap pada iterasi yang sama
+        i--;
+    }
+    }
+
+    // Menghitung rata-rata
+    let rataRata = total / 20;
+
+    // Menampilkan hasil
+    console.log(`Bilangan Terbesar: ${bilanganTerbesar}`);
+    console.log(`Bilangan Terkecil: ${bilanganTerkecil}`);
+    console.log(`Rata-rata: ${rataRata}`);
+
+    </script>
+</body>
+</html>

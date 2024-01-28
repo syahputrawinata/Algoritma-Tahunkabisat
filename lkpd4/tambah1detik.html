@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     function tambah1detik(add1detik){
+    //     let jam = prompt('Masukan Jam')
+    //     let menit = prompt('Masukan Menit')
+    //     let Detik = prompt('Masukan detik')
+
+    //     let hh = jam + 1;
+    //     let mm = menit + 1;
+    //     let dd = detik + 1;
+
+    //     // Menangani kasus ketika detik melebihi 59
+    //     if (seconds >= 60) {
+    //     seconds = 0;
+    //     minutes += 1;
+
+    //     // Menangani kasus ketika menit melebihi 59
+    //     if (minutes >= 60) {
+    //         minutes = 0;
+    //         hours += 1;
+
+    //     // Menangani kasus ketika jam melebihi 23
+    //     if (hours >= 24) {
+    //     hours = 0;
+    //     }
+    //     }
+    //     }
+
+    // }
+    // return  hh + ":" + mm + ":" + dd;
+    // console.log(tambah1detik)
+
+
+    function addOneSecond(timeString) {
+    // Memecah waktu menjadi jam, menit, dan detik
+    var timeComponents = timeString.split(":");
+    var hours = parseInt(timeComponents[0], 10);
+    var minutes = parseInt(timeComponents[1], 10);
+    var seconds = parseInt(timeComponents[2], 10);
+
+    // Menambahkan 1 detik
+    seconds += 1;
+
+    // Menangani kasus ketika detik melebihi 59
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes += 1;
+
+        // Menangani kasus ketika menit melebihi 59
+        if (minutes >= 60) {
+            minutes = 0;
+            hours += 1;
+
+            // Menangani kasus ketika jam melebihi 23
+            if (hours >= 24) {
+                hours = 0;
+            }
+        }
+    }
+
+    // Membuat format waktu baru dengan memastikan format dua digit (misal: 08 instead of 8)
+    var formattedHours = ("0" + hours).slice(-2);
+    var formattedMinutes = ("0" + minutes).slice(-2);
+    var formattedSeconds = ("0" + seconds).slice(-2);
+
+    // Mengembalikan waktu setelah ditambahkan 1 detik
+    return formattedHours + ":" + formattedMinutes + ":" + formattedSeconds;
+    }
+
+    // Contoh penggunaan
+    var currentTime = "23:59:59";
+    var newTime = addOneSecond(currentTime);
+    console.log("Waktu setelah ditambahkan 1 detik: " + newTime);
+
+
+    </script>
+</body>
+</html>

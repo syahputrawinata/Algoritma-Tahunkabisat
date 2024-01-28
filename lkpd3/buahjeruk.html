@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let kilo = prompt('berdasarkan KG');
+        let harga = 5000;
+        let diskon = 5;
+
+        let sebelumdiskon = kilo * harga;
+        let discount = (diskon / 100) * sebelumdiskon;
+        let setelahdiskon = sebelumdiskon - discount;
+        
+        console.log('Harga Sebelum Diskon', sebelumdiskon)
+        console.log('Total Diskon', discount)
+        console.log('Harga Setelah Diskon', setelahdiskon)
+
+    </script>
+</body>
+</html>
